@@ -2,9 +2,10 @@ import SetterButton from "../islands/SetterButton.tsx";
 
 
 interface CardProps {
-    name: string
-    key: number
+    name: string;
+    key: number;
     setState: (state: string) => void;
+    image: string;
 }
 
 export default function Card(props: CardProps){
