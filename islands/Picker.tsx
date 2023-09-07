@@ -8,8 +8,8 @@ import CharacterListComponent from "../components/CharacterList.tsx";
 
 
 export default function Picker(){
-    const [pickChar, setPickChar] = useState(true)
-    const [pickEpisode, setPickEpisode] = useState(false)
+    const [pickChar, setPickChar] = useState(false)
+    const [pickEpisode, setPickEpisode] = useState(true)
     const [pickMovie, setPickMovie] = useState(false)
 
     const [character, setCharacter] = useState('none')
@@ -25,7 +25,7 @@ export default function Picker(){
 
 
     return (
-        <div className={'flex justify-center flex-wrap'}>
+        <div className={'flex flex-wrap'}>
 
             {pickChar && (
                 <div className={'text-center font-bold'}>
@@ -43,7 +43,9 @@ export default function Picker(){
                       the current episode is...
                     {episode}
                   </p>
+                    <div>
                   <EpisodeListComponent setEpisode={setEpisode} episodes={episodes} />
+                    </div>
                 </div>
               )}
             {pickMovie && (

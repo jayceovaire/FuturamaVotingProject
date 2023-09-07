@@ -13,7 +13,7 @@ export default function MoviesListComponent(props: MoviesProps) {
   return (
     <>
       {movies.map((movie) => (
-        <Card setState={setMovie} key={movie.number} name={movie.title} />
+        <Card setState={setMovie} key={movie.number} name={movie.title} image={movie.imageUrl} />
       ))}
     </>
   );
