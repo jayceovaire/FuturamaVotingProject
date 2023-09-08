@@ -6,9 +6,10 @@ import * as $0 from "./routes/EpisodeVotingPage.tsx";
 import * as $1 from "./routes/_404.tsx";
 import * as $2 from "./routes/_app.tsx";
 import * as $3 from "./routes/index.tsx";
-import * as $$0 from "./islands/Nav.tsx";
-import * as $$1 from "./islands/Picker.tsx";
-import * as $$2 from "./islands/SetterButton.tsx";
+import * as $$0 from "./islands/InfoCard.tsx";
+import * as $$1 from "./islands/Nav.tsx";
+import * as $$2 from "./islands/Picker.tsx";
+import * as $$3 from "./islands/SetterButton.tsx";
 
 const manifest = {
   routes: {
@@ -18,9 +19,10 @@ const manifest = {
     "./routes/index.tsx": $3,
   },
   islands: {
-    "./islands/Nav.tsx": $$0,
-    "./islands/Picker.tsx": $$1,
-    "./islands/SetterButton.tsx": $$2,
+    "./islands/InfoCard.tsx": $$0,
+    "./islands/Nav.tsx": $$1,
+    "./islands/Picker.tsx": $$2,
+    "./islands/SetterButton.tsx": $$3,
   },
   baseUrl: import.meta.url,
 };

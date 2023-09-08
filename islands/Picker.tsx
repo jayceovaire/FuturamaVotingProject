@@ -12,6 +12,8 @@ export default function Picker(){
     const [pickEpisode, setPickEpisode] = useState(true)
     const [pickMovie, setPickMovie] = useState(false)
 
+    const [hoverState, setHoverState] = useState(0)
+
     const [character, setCharacter] = useState('none')
     const [episode, setEpisode] = useState('none')
     const [movie, setMovie] = useState('none')
@@ -33,7 +35,8 @@ export default function Picker(){
                         the current character is...
                         {character}
                     </p>
-                    <CharacterListComponent setCharacter={setCharacter} characters={characters}/>
+                    <CharacterListComponent setHoverState={setHoverState} setCharacter={setCharacter} characters={characters}/>
+                    {/* Add Component that updates image and episode description when hovering over cards */}
 
                 </div>
             )}
