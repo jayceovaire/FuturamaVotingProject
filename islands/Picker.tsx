@@ -5,6 +5,8 @@ import {movies} from "../static/moviesList.ts";
 import EpisodeListComponent from "../components/EpisodeList.tsx";
 import MoviesListComponent from "../components/MoviesList.tsx";
 import CharacterListComponent from "../components/CharacterList.tsx";
+import InfoCard from "./InfoCard.tsx";
+
 
 
 export default function Picker(){
@@ -36,21 +38,27 @@ export default function Picker(){
                         {character}
                     </p>
                     <CharacterListComponent setHoverState={setHoverState} setCharacter={setCharacter} characters={characters}/>
-                    {/* Add Component that updates image and episode description when hovering over cards */}
+
 
                 </div>
             )}
             {pickEpisode && (
-                <div className={'text-center font-bold'}>
-                  <p>
-                      the current episode is...
-                    {episode}
-                  </p>
-                    <div>
-                  <EpisodeListComponent setEpisode={setEpisode} episodes={episodes} />
+                <div className={'font-bold'}>
+                    <p className={'text-center'}>
+                        the current episode is...
+                        {episode}
+                    </p>
+                    <div className={'grid grid-cols-12'}>
+                        <div className={'col-start-1 col-span-8'}>
+                        <EpisodeListComponent setEpisode={setEpisode} episodes={episodes} />
+                        </div>
+                        <div className={'col-start-10 col-span-2'}>
+                            <InfoCard hoverState={hoverState} />
+                        </div>
                     </div>
                 </div>
-              )}
+            )}
+
             {pickMovie && (
                 <div className={"text-center font-bold"}>
                     <p>The current movie is...
