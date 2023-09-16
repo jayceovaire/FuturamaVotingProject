@@ -14,7 +14,8 @@ export default function Picker(){
     const [pickEpisode, setPickEpisode] = useState(true)
     const [pickMovie, setPickMovie] = useState(false)
 
-    const [hoverState, setHoverState] = useState(0)
+    const [hoverState, setHoverState] = useState(1)
+    const [imageState, setImageState] = useState("./images/episodes/Space_Pilot_3000.webp")
 
     const [character, setCharacter] = useState('none')
     const [episode, setEpisode] = useState('none')
@@ -50,10 +51,10 @@ export default function Picker(){
                     </p>
                     <div className={'grid grid-cols-12'}>
                         <div className={'col-start-1 col-span-8'}>
-                        <EpisodeListComponent setEpisode={setEpisode} episodes={episodes} />
+                        <EpisodeListComponent setHoverState={setHoverState} setEpisode={setEpisode} setImageState={setImageState} episodes={episodes} />
                         </div>
                         <div className={'col-start-10 col-span-2'}>
-                            <InfoCard hoverState={hoverState} />
+                            <InfoCard imageState={imageState} hoverState={hoverState} />
                         </div>
                     </div>
                 </div>
@@ -63,7 +64,7 @@ export default function Picker(){
                 <div className={"text-center font-bold"}>
                     <p>The current movie is...
                         {movie}</p>
-                    <MoviesListComponent setMovie={setMovie} movies={movies} />
+                    <MoviesListComponent setHoverState={setHoverState} setMovie={setMovie} movies={movies} />
                 </div>
             )}
 
