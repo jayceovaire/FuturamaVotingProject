@@ -15,7 +15,7 @@ export default function Picker(){
     const [pickMovie, setPickMovie] = useState(false)
 
     const [hoverState, setHoverState] = useState(1)
-    const [imageState, setImageState] = useState("./images/episodes/Space_Pilot_3000.webp")
+    const [imageState, setImageState] = useState("./images/episodes/season_1/Space_Pilot_3000.webp")
 
     const [character, setCharacter] = useState('none')
     const [episode, setEpisode] = useState('none')
