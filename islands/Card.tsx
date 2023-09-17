@@ -1,6 +1,5 @@
 import SetterButton from "./SetterButton.tsx";
-import {episodes} from "../static/episodeList.ts";
-import pr from "https://esm.sh/v130/get-intrinsic@1.2.1/denonext/get-intrinsic.mjs";
+
 
 
 interface CardProps {
@@ -22,7 +21,6 @@ export default function Card(props: CardProps){
     const handleHover = () => {
             setHoverState(epnumber)
             setImageState(image)
-
     }
 
 

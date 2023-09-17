@@ -6,7 +6,7 @@ import EpisodeListComponent from "../components/EpisodeList.tsx";
 import MoviesListComponent from "../components/MoviesList.tsx";
 import CharacterListComponent from "../components/CharacterList.tsx";
 import InfoCard from "./InfoCard.tsx";
-
+import {Handlers} from "https://deno.land/x/fresh@1.4.3/src/server/types.ts";
 
 
 export default function Picker(){
@@ -22,11 +22,28 @@ export default function Picker(){
     const [movie, setMovie] = useState('none')
 
 
+    useEffect(() => {
 
-    const choiceUpdates = useEffect(() => {
+        async function getEpisodeResponse(episode: string){
+            try{
+                const response = await fetch(`/api/${episode}`)
 
+                if (!response.ok){
+                    throw new Error(`HTTP error! status: ${response.status}`)
+                }
+                const data = await response.json()
+                return data;
+            }catch(error){
+                console.error("Failed to fetch episode data:", error)
+            }
+        }
 
-    }, [character, movie, episode, pickMovie, pickEpisode, pickChar])
+        const episodeData = getEpisodeResponse(episode);
+        console.log(episodeData)
+        console.log(episode)
+
+}, [episode]); // This useEffect runs whenever 'episode' state changes
+
 
 
     return (

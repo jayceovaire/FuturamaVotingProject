@@ -5,7 +5,8 @@
 import * as $0 from "./routes/EpisodeVotingPage.tsx";
 import * as $1 from "./routes/_404.tsx";
 import * as $2 from "./routes/_app.tsx";
-import * as $3 from "./routes/index.tsx";
+import * as $3 from "./routes/api/[episode].ts";
+import * as $4 from "./routes/index.tsx";
 import * as $$0 from "./islands/Card.tsx";
 import * as $$1 from "./islands/InfoCard.tsx";
 import * as $$2 from "./islands/Nav.tsx";
@@ -17,7 +18,8 @@ const manifest = {
     "./routes/EpisodeVotingPage.tsx": $0,
     "./routes/_404.tsx": $1,
     "./routes/_app.tsx": $2,
-    "./routes/index.tsx": $3,
+    "./routes/api/[episode].ts": $3,
+    "./routes/index.tsx": $4,
   },
   islands: {
     "./islands/Card.tsx": $$0,
