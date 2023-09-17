@@ -131,7 +131,7 @@ export const episodes: EpisodeList = [
   { number: 116, title: "The Inhuman Torch", imageUrl: "" },
   { number: 117, title: "Saturday Morning Fun Pit", imageUrl: "" },
   { number: 118, title: "Calculon 2.0", imageUrl: "" },
-  { number: 119, title: "The Assie Come Home", imageUrl: "" },
+  { number: 119, title: "Assie Come Home", imageUrl: "" },
   { number: 120, title: "Leela and the Genestalk", imageUrl: "" },
   { number: 121, title: "Game of Tones", imageUrl: "" },
   { number: 122, title: "Murder on the Planet Express", imageUrl: "" },
